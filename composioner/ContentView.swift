@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var imageFetcher: ImageFetcher = .init()
     var body: some View {
         NavigationView {
             ScrollView {
-                CompositionalView(items: 1...15, id: \.self) { item in
-                    ZStack {
-                        Rectangle()
-                            .fill(.red)
-                        Text("\(item)")
-                            .font(.title.bold())
+                if let images = imageFetcher.fetchImages {
+                    CompositionalView(items: images, id: \.id) { item in
+                        ZStack {
+                            Rectangle()
+                                .fill(.red)
+                            Text("\(item)")
+                                .font(.title.bold())
+                        }
                     }
+                    .padding()
+                } else {
+                    ProgressView()
                 }
             }
             .navigationTitle("Composioner".uppercased())
