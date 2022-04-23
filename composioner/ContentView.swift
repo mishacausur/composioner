@@ -6,22 +6,43 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
     @StateObject var imageFetcher: ImageFetcher = .init()
     var body: some View {
         NavigationView {
-            ScrollView {
+            Group {
                 if let images = imageFetcher.fetchImages {
-                    CompositionalView(items: images, id: \.id) { item in
-                        ZStack {
-                            Rectangle()
-                                .fill(.red)
-                            Text("\(item)")
-                                .font(.title.bold())
+                    ScrollView {
+                        CompositionalView(items: images, id: \.id) { item in
+                            GeometryReader { proxy in
+                                let size = proxy.size
+                                WebImage(url: URL(string: item.download_url))
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: size.width, height: size.height)
+                                    .cornerRadius(10)
+                                    .onAppear {
+                                        if images.last?.id == item.id {
+                                            imageFetcher.startPagination = true
+                                        }
+                                    }
+                            }
+                        }
+                        .padding()
+                        .padding(.bottom, 10)
+                        
+                        if imageFetcher.startPagination && !imageFetcher.endPagination {
+                            ProgressView()
+                                .offset(y: -15)
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                        imageFetcher.updateImages()
+                                    }
+                                }
                         }
                     }
-                    .padding()
                 } else {
                     ProgressView()
                 }
