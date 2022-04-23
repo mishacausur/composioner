@@ -11,7 +11,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-               CompositionalView()
+                CompositionalView(items: 1...15, id: \.self) { item in
+                    ZStack {
+                        Rectangle()
+                            .fill(.red)
+                        Text("\(item)")
+                            .font(.title.bold())
+                    }
+                }
             }
             .navigationTitle("Composioner".uppercased())
         }
