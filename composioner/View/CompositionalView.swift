@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompositionalView<Content, Item, ID>: View where Content: View, ID: Hashable, Item: RandomAccessCollection {
+struct CompositionalView<Content, Item, ID>: View where Content: View, ID: Hashable, Item: RandomAccessCollection, Item.Element: Hashable {
     var content: (Item.Element) -> Content
     var items: Item
     var id: KeyPath<Item.Element, ID>
@@ -20,11 +20,29 @@ struct CompositionalView<Content, Item, ID>: View where Content: View, ID: Hasha
     }
     var body: some View {
         LazyVStack(spacing: spacing) {
-            
+            ForEach(generateColumns(), id: \.self) { row in
+                
+            }
         }
     }
     
-    func generateColumns() -> [[Item.Element]]
+    func generateColumns() -> [[Item.Element]] {
+        var columns: [[Item.Element]] = []
+        var row: [Item.Element] = []
+        
+        for item in items {
+            if row.count == 3 {
+                columns.append(row)
+                row.removeAll()
+                row.append(item)
+            } else {
+                row.append(item)
+            }
+        }
+        columns.append(row)
+        row.removeAll()
+        return columns
+    }
 }
 
 struct CompositionalView_Previews: PreviewProvider {
