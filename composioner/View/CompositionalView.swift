@@ -12,7 +12,7 @@ struct CompositionalView<Content, Item, ID>: View where Content: View, ID: Hasha
     var items: Item
     var id: KeyPath<Item.Element, ID>
     var spacing: CGFloat
-    init(items: Item, id: KeyPath<Item.Element, ID>, spacing: CGFloat = 5,@ViewBuilder content: @escaping (Item.Element) -> Content) {
+    init(items: Item, id: KeyPath<Item.Element, ID>, spacing: CGFloat = 5, @ViewBuilder content: @escaping (Item.Element) -> Content) {
         self.content = content
         self.id = id
         self.items = items
