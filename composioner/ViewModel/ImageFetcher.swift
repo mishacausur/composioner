@@ -23,7 +23,7 @@ class ImageFetcher: ObservableObject {
             do {
                try await fetchImages()
             } catch {
-                
+               assertionFailure("Invalid data recieved")
             }
         }
     }
