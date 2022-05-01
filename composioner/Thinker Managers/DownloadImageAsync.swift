@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-class DownloadImageAsyncViewModel
+class DownloadImageAsyncViewModel: ObservableObject {
+    
+}
 
 struct DownloadImageAsync: View {
     var body: some View {
