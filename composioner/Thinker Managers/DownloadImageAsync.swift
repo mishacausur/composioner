@@ -8,13 +8,29 @@
 import SwiftUI
 
 class DownloadImageAsyncViewModel: ObservableObject {
+    @Published var image: UIImage? = nil
     
+    func fetchImage() {
+        self.image = UIImage(systemName: "heart.fill")
+    }
 }
 
 struct DownloadImageAsync: View {
+    @StateObject private var viewModel = DownloadImageAsyncViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            if let image = viewModel.image {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250, height: 250)
+            }
+        }
+        .onAppear {
+            viewModel.fetchImage()
+        }
     }
+        
 }
 
 struct DownloadImageAsync_Previews: PreviewProvider {
