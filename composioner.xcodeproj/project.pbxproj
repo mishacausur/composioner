@@ -15,6 +15,7 @@
 		B65A564F2814991D008B7922 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A564E2814991D008B7922 /* ImageModel.swift */; };
 		B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A565028149A4F008B7922 /* ImageFetcher.swift */; };
 		B6A8330028149DA100DAFCE1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6A832FF28149DA100DAFCE1 /* SDWebImageSwiftUI */; };
+		B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B65A564C28148D54008B7922 /* CompositionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalView.swift; sourceTree = "<group>"; };
 		B65A564E2814991D008B7922 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		B65A565028149A4F008B7922 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B6C9CAB2281E9ADF009947D0 /* Thinker Managers */,
 				B65A564B28148CEA008B7922 /* Model */,
 				B65A564A28148CE3008B7922 /* ViewModel */,
 				B65A564928148CD6008B7922 /* View */,
@@ -100,6 +103,14 @@
 				B65A564E2814991D008B7922 /* ImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B6C9CAB2281E9ADF009947D0 /* Thinker Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */,
+			);
+			path = "Thinker Managers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
+				B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */,
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
