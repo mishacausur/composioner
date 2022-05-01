@@ -71,7 +71,9 @@ class DownloadImageAsyncViewModel: ObservableObject {
     
     func fetchAsync() async {
         let image = try? await loader.downloadWithAsync()
-        self.image = image
+        await MainActor.run {
+            self.image = image
+        }
     }
 }
 
@@ -88,7 +90,10 @@ struct DownloadImageAsync: View {
         }
         .onAppear {
 //            viewModel.fetchImage()
-            viewModel.fetchCombiner()
+//            viewModel.fetchCombiner()
+            Task {
+                await viewModel.fetchAsync()
+            }
         }
     }
         
