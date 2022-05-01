@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 class DownloadImageAsyncImageLoader {
     let url = URL(string: "https://picsum.photos/200")!
@@ -27,17 +28,38 @@ class DownloadImageAsyncImageLoader {
             completionHandler(image, error)
         }.resume()
     }
+    
+    func dowliadWithCombine() -> AnyPublisher<UIImage?, Error> {
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map(handleResponse)
+            .mapError({ $0 })
+            .eraseToAnyPublisher()
+    }
 }
 
 class DownloadImageAsyncViewModel: ObservableObject {
     @Published var image: UIImage? = nil
     let loader = DownloadImageAsyncImageLoader()
+    var cancellables = Set<AnyCancellable>()
     func fetchImage() {
         loader.downloadWithEscaping { [weak self] image, error in
             DispatchQueue.main.async {
                 self?.image = image
             }
         }
+    }
+    
+    func fetchCombiner() {
+        loader.dowliadWithCombine()
+            .sink { _ in
+                
+            } receiveValue: { [weak self] image in
+                DispatchQueue.main.async {
+                    self?.image = image
+                }
+            }
+            .store(in: &cancellables)
+        
     }
 }
 
@@ -53,7 +75,8 @@ struct DownloadImageAsync: View {
             }
         }
         .onAppear {
-            viewModel.fetchImage()
+//            viewModel.fetchImage()
+            viewModel.fetchCombiner()
         }
     }
         
