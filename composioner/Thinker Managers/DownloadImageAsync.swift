@@ -51,12 +51,11 @@ class DownloadImageAsyncViewModel: ObservableObject {
     
     func fetchCombiner() {
         loader.dowliadWithCombine()
+            .receive(on: DispatchQueue.main)
             .sink { _ in
                 
             } receiveValue: { [weak self] image in
-                DispatchQueue.main.async {
-                    self?.image = image
-                }
+                self?.image = image
             }
             .store(in: &cancellables)
         
