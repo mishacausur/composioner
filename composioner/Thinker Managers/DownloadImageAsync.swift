@@ -35,6 +35,15 @@ class DownloadImageAsyncImageLoader {
             .mapError({ $0 })
             .eraseToAnyPublisher()
     }
+    
+    func downloadWithAsync() async throws -> UIImage? {
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url, delegate: nil)
+            return handleResponse(data: data, response: response)
+        } catch {
+            throw error
+        }
+    }
 }
 
 class DownloadImageAsyncViewModel: ObservableObject {
@@ -58,7 +67,11 @@ class DownloadImageAsyncViewModel: ObservableObject {
                 self?.image = image
             }
             .store(in: &cancellables)
-        
+    }
+    
+    func fetchAsync() async {
+        let image = try? await loader.downloadWithAsync()
+        self.image = image
     }
 }
 
