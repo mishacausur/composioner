@@ -21,21 +21,21 @@ class DownloadImageAsyncImageLoader {
         }
         return image
     }
-    
+    // escaping
     func downloadWithEscaping(completionHandler: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             let image = self?.handleResponse(data: data, response: response)
             completionHandler(image, error)
         }.resume()
     }
-    
+    // combine
     func dowliadWithCombine() -> AnyPublisher<UIImage?, Error> {
         URLSession.shared.dataTaskPublisher(for: url)
             .map(handleResponse)
             .mapError({ $0 })
             .eraseToAnyPublisher()
     }
-    
+    // async
     func downloadWithAsync() async throws -> UIImage? {
         do {
             let (data, response) = try await URLSession.shared.data(from: url, delegate: nil)
