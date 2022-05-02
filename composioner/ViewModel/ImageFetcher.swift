@@ -27,7 +27,7 @@ class ImageFetcher: ObservableObject {
             }
         }
     }
-    
+    // using async
     func fetchImages() async throws {
         guard let url = URL(string: "https://picsum.photos/v2/list?page=\(currentPage)&limit=30") else { return }
         let response = try await URLSession.shared.data(from: url)
