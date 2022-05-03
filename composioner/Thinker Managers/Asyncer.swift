@@ -29,6 +29,12 @@ class AsyncerViewModel: ObservableObject {
     func addAuthor() async {
         let author = "Autor: \(Thread.current)"
         self.dataArray.append(author)
+        try? await Task.sleep(nanoseconds: 1_000_000_000)
+        let author2 = "Autor: \(Thread.current)"
+        await MainActor.run(body: {
+            self.dataArray.append(author2)
+        })
+      
     }
 }
 
