@@ -14,7 +14,9 @@ final class TaskersViewModel: ObservableObject {
         guard let url = URL(string: "https://picsum.photos/200") else { return }
         do {
             let response = try await URLSession.shared.data(from: url, delegate: nil)
-            self.image = UIImage(data: response.0)
+            await MainActor.run {
+                self.image = UIImage(data: response.0)
+            }
         } catch (let error) {
             print(error)
         }
@@ -23,7 +25,9 @@ final class TaskersViewModel: ObservableObject {
         guard let url = URL(string: "https://picsum.photos/200") else { return }
         do {
             let response = try await URLSession.shared.data(from: url, delegate: nil)
-            self.image2 = UIImage(data: response.0)
+            await MainActor.run(body: {
+                self.image2 = UIImage(data: response.0)
+            })
         } catch (let error) {
             print(error)
         }
@@ -48,7 +52,8 @@ struct Taskers: View {
             }
         }
         .onAppear {
-            Task {
+            Task(priority: .background) {
+                await Task.yield()
                 await viewModel.fetchImage()
             }
             Task {
