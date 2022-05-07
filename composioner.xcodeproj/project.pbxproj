@@ -19,6 +19,9 @@
 		B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB52820612F009947D0 /* Asyncer.swift */; };
 		B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAC72822FDA9009947D0 /* Taskers.swift */; };
 		B6C9CACB282529CD009947D0 /* ExpertoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CACA282529CD009947D0 /* ExpertoView.swift */; };
+		B6C9CACD28268C87009947D0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CACC28268C87009947D0 /* MainView.swift */; };
+		B6C9CACF28268C9A009947D0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CACE28268C9A009947D0 /* Model.swift */; };
+		B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD028268DAA009947D0 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B6C9CAB52820612F009947D0 /* Asyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncer.swift; sourceTree = "<group>"; };
 		B6C9CAC72822FDA9009947D0 /* Taskers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskers.swift; sourceTree = "<group>"; };
 		B6C9CACA282529CD009947D0 /* ExpertoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertoView.swift; sourceTree = "<group>"; };
+		B6C9CACC28268C87009947D0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B6C9CACE28268C9A009947D0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B6C9CAD028268DAA009947D0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				B6C9CACA282529CD009947D0 /* ExpertoView.swift */,
+				B6C9CACC28268C87009947D0 /* MainView.swift */,
+				B6C9CAD028268DAA009947D0 /* CardView.swift */,
+				B6C9CACE28268C9A009947D0 /* Model.swift */,
 			);
 			path = Experto;
 			sourceTree = "<group>";
@@ -209,11 +218,14 @@
 				B65A564D28148D54008B7922 /* CompositionalView.swift in Sources */,
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
+				B6C9CACD28268C87009947D0 /* MainView.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
 				B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */,
 				B6C9CACB282529CD009947D0 /* ExpertoView.swift in Sources */,
 				B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */,
+				B6C9CACF28268C9A009947D0 /* Model.swift in Sources */,
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
+				B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */,
 				B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
