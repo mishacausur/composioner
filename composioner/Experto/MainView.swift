@@ -10,9 +10,9 @@ import SwiftUI
 struct MainView: View {
     var checks: [Model] = Model.data
     var body: some View {
-        ForEach(checks, id: \.id) { check in
-            HStack {
-                
+        ScrollView {
+            ForEach(checks, id: \.id) { check in
+                    CardView(check: check)
             }
         }
     }

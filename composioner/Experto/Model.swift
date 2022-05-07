@@ -5,7 +5,7 @@
 //  Created by Misha Causur on 07.05.2022.
 //
 
-import Foundation
+import SwiftUI
 
 enum Status {
     case progress
@@ -17,6 +17,19 @@ enum Status {
 struct Model: Identifiable {
     let id = UUID()
     let status: Status
+    
+    var color: Color {
+        switch status {
+        case .progress:
+            return .gray
+        case .good:
+            return .green
+        case .middle:
+            return .yellow
+        case .bad:
+            return .red
+        }
+    }
     
     static let data: [Model] = [
         .init(status: .good),
