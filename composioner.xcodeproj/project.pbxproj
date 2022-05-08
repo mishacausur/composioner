@@ -23,6 +23,8 @@
 		B6C9CACF28268C9A009947D0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CACE28268C9A009947D0 /* Model.swift */; };
 		B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD028268DAA009947D0 /* CardView.swift */; };
 		B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD32827B8CA009947D0 /* Modo.swift */; };
+		B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD52827B9AE009947D0 /* ModoView.swift */; };
+		B6C9CAD82827B9BE009947D0 /* Combainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD72827B9BE009947D0 /* Combainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		B6C9CACE28268C9A009947D0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B6C9CAD028268DAA009947D0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B6C9CAD32827B8CA009947D0 /* Modo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modo.swift; sourceTree = "<group>"; };
+		B6C9CAD52827B9AE009947D0 /* ModoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModoView.swift; sourceTree = "<group>"; };
+		B6C9CAD72827B9BE009947D0 /* Combainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				B6C9CAD32827B8CA009947D0 /* Modo.swift */,
+				B6C9CAD52827B9AE009947D0 /* ModoView.swift */,
+				B6C9CAD72827B9BE009947D0 /* Combainer.swift */,
 			);
 			path = Asyncer;
 			sourceTree = "<group>";
@@ -236,9 +242,11 @@
 				B6C9CACB282529CD009947D0 /* ExpertoView.swift in Sources */,
 				B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */,
 				B6C9CACF28268C9A009947D0 /* Model.swift in Sources */,
+				B6C9CAD82827B9BE009947D0 /* Combainer.swift in Sources */,
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 				B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */,
 				B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */,
+				B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
