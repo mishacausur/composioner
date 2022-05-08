@@ -33,3 +33,38 @@ struct Combiner {
             .eraseToAnyPublisher()
     }
 }
+
+struct Awaiter {
+    func getUsers() async -> Result<[User], Error> {
+        do {
+            let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
+            let response = try await URLSession.shared.data(from: url)
+            let users = try JSONDecoder().decode([User].self, from: response.0)
+            return .success(users)
+        } catch(let error) {
+            return .failure(error)
+        }
+    }
+    
+    func getPosts(userID: Int) async -> Result<[Post], Error> {
+        do {
+            let url = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=\(userID)")!
+            let response = try await URLSession.shared.data(from: url)
+            let posts = try JSONDecoder().decode([Post].self, from: response.0)
+            return .success(posts)
+        } catch(let error) {
+            return .failure(error)
+        }
+    }
+    
+    func getComments(postID: Int) async -> Result<[Comment], Error> {
+        do {
+            let url = URL(string: "https://jsonplaceholder.typicode.com/comments?postId=\(postID)")!
+            let response = try await URLSession.shared.data(from: url)
+            let comments = try JSONDecoder().decode([Comment].self, from: response.0)
+            return .success(comments)
+        } catch(let error) {
+            return .failure(error)
+        }
+    }
+}
