@@ -9,7 +9,10 @@ import SwiftUI
 
 struct Ringer: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Ring(lineWidth: 50, backgroundColor: .red.opacity(0.2), foregroundColor: .red, percentage: 70)
+                .frame(width: 300, height: 300)
+        }
     }
 }
 

@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct Ring: View {
+    let lineWidth: CGFloat
+    let backgroundColor: Color
+    let foregroundColor: Color
+    let percentage: Double
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct Ring_Previews: PreviewProvider {
-    static var previews: some View {
-        Ring()
+        GeometryReader { geometry in
+            ZStack {
+                RingShape()
+                    .stroke(style: StrokeStyle(lineWidth: lineWidth))
+                    .fill(backgroundColor)
+                RingShape(percent: percentage)
+                    .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                    .fill(foregroundColor)
+            }
+            .animation(Animation.easeIn(duration: 1))
+            .padding()
+        }
     }
 }

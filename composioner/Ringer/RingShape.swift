@@ -20,7 +20,7 @@ struct RingShape: Shape {
         }
     }
     init(
-        percent: Double,
+        percent: Double = 100,
         startAngle: Double = -90
     ) {
         self.percent = percent
