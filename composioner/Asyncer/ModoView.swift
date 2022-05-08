@@ -8,13 +8,22 @@
 import SwiftUI
 
 final class ModoViewModel: ObservableObject {
-    
+    @Published var comments: [Comment] = []
+    private let combiner = Combiner()
+    func fetchCommentsCombiner() {
+        
+    }
 }
 
 struct ModoView: View {
-    @Obser
+    @ObservedObject var viewModel = ModoViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.comments) { comment in
+            Text(comment.email)
+        }
+        .onAppear {
+            viewModel.fetchCommentsCombiner()
+        }
     }
 }
 
