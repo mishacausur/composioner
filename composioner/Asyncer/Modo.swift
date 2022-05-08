@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct User: Decodable {
     let id: Int
@@ -22,4 +23,10 @@ struct Comment: Decodable, Identifiable {
     let id: Int
     let postId: Int
     let email: String
+}
+
+enum APIError: Error {
+    case emptyUsers
+    case emptyPosts
+    case emptyComments
 }
