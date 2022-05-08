@@ -25,6 +25,9 @@
 		B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD32827B8CA009947D0 /* Modo.swift */; };
 		B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD52827B9AE009947D0 /* ModoView.swift */; };
 		B6C9CAD82827B9BE009947D0 /* Combainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD72827B9BE009947D0 /* Combainer.swift */; };
+		B6C9CADB2827D2CA009947D0 /* Ringer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CADA2827D2CA009947D0 /* Ringer.swift */; };
+		B6C9CADD2827D311009947D0 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CADC2827D311009947D0 /* Ring.swift */; };
+		B6C9CADF2827D321009947D0 /* RingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CADE2827D321009947D0 /* RingShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		B6C9CAD32827B8CA009947D0 /* Modo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modo.swift; sourceTree = "<group>"; };
 		B6C9CAD52827B9AE009947D0 /* ModoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModoView.swift; sourceTree = "<group>"; };
 		B6C9CAD72827B9BE009947D0 /* Combainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combainer.swift; sourceTree = "<group>"; };
+		B6C9CADA2827D2CA009947D0 /* Ringer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ringer.swift; sourceTree = "<group>"; };
+		B6C9CADC2827D311009947D0 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
+		B6C9CADE2827D321009947D0 /* RingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B6C9CAD92827D29C009947D0 /* Ringer */,
 				B6C9CAD22827B8AE009947D0 /* Asyncer */,
 				B6C9CAC92825298C009947D0 /* Experto */,
 				B6C9CAB2281E9ADF009947D0 /* Thinker Managers */,
@@ -154,6 +161,16 @@
 				B6C9CAD72827B9BE009947D0 /* Combainer.swift */,
 			);
 			path = Asyncer;
+			sourceTree = "<group>";
+		};
+		B6C9CAD92827D29C009947D0 /* Ringer */ = {
+			isa = PBXGroup;
+			children = (
+				B6C9CADA2827D2CA009947D0 /* Ringer.swift */,
+				B6C9CADC2827D311009947D0 /* Ring.swift */,
+				B6C9CADE2827D321009947D0 /* RingShape.swift */,
+			);
+			path = Ringer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +253,10 @@
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
 				B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
+				B6C9CADD2827D311009947D0 /* Ring.swift in Sources */,
 				B6C9CACD28268C87009947D0 /* MainView.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
+				B6C9CADF2827D321009947D0 /* RingShape.swift in Sources */,
 				B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */,
 				B6C9CACB282529CD009947D0 /* ExpertoView.swift in Sources */,
 				B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */,
@@ -246,6 +265,7 @@
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 				B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */,
 				B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */,
+				B6C9CADB2827D2CA009947D0 /* Ringer.swift in Sources */,
 				B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

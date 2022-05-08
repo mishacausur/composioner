@@ -59,11 +59,17 @@ final class ModoViewModel: ObservableObject {
 struct ModoView: View {
     @ObservedObject var viewModel = ModoViewModel()
     var body: some View {
-        List(viewModel.comments) { comment in
-            Text(comment.email)
-        }
-        .onAppear {
-            viewModel.fetchCommentsCombiner()
+        VStack {
+            List(viewModel.comments) { comment in
+                Text(comment.email)
+            }
+            List(viewModel.acomments) { comment in
+                Text(comment.email)
+            }
+            .onAppear {
+                viewModel.fetchCommentsCombiner()
+                viewModel.fetchCommentsAsyncer()
+            }
         }
     }
 }
