@@ -22,6 +22,7 @@
 		B6C9CACD28268C87009947D0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CACC28268C87009947D0 /* MainView.swift */; };
 		B6C9CACF28268C9A009947D0 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CACE28268C9A009947D0 /* Model.swift */; };
 		B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD028268DAA009947D0 /* CardView.swift */; };
+		B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAD32827B8CA009947D0 /* Modo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B6C9CACC28268C87009947D0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B6C9CACE28268C9A009947D0 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B6C9CAD028268DAA009947D0 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B6C9CAD32827B8CA009947D0 /* Modo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B6C9CAD22827B8AE009947D0 /* Asyncer */,
 				B6C9CAC92825298C009947D0 /* Experto */,
 				B6C9CAB2281E9ADF009947D0 /* Thinker Managers */,
 				B65A564B28148CEA008B7922 /* Model */,
@@ -137,6 +140,14 @@
 				B6C9CACE28268C9A009947D0 /* Model.swift */,
 			);
 			path = Experto;
+			sourceTree = "<group>";
+		};
+		B6C9CAD22827B8AE009947D0 /* Asyncer */ = {
+			isa = PBXGroup;
+			children = (
+				B6C9CAD32827B8CA009947D0 /* Modo.swift */,
+			);
+			path = Asyncer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 			files = (
 				B65A564D28148D54008B7922 /* CompositionalView.swift in Sources */,
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
+				B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
 				B6C9CACD28268C87009947D0 /* MainView.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
