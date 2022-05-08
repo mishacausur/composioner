@@ -9,8 +9,10 @@ import SwiftUI
 
 final class ModoViewModel: ObservableObject {
     @Published var comments: [Comment] = []
+    @Published var acomments: [Comment] = []
     private let combiner = Combiner()
     private var cancellables = Set<AnyCancellable>()
+    private let asyncer = Awaiter()
     func fetchCommentsCombiner() {
         combiner.getUser().flatMap { [weak self] users -> AnyPublisher<[Post], Error> in
             if let user = users.first, let self = self {
@@ -36,7 +38,21 @@ final class ModoViewModel: ObservableObject {
                 self?.comments = comments
             }
         }.store(in: &cancellables)
-
+    }
+    
+    func fetchCommentsAsyncer() {
+        Task(priority: .background) {
+            let users: Result<[User], Error> = await asyncer.getUsers()
+            guard case .success(let users) = users, let user = users.first else { return }
+            let posts  = await asyncer.getPosts(userID: user.id)
+            guard case .success(let posts) = posts, let post = posts.first else { return }
+            let comments = await asyncer.getComments(postID: post.id)
+            guard case .success(let comments) = comments else { return }
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.acomments = comments
+            }
+        }
     }
 }
 
