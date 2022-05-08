@@ -19,7 +19,7 @@ struct Post: Decodable {
     let title: String
 }
 
-struct Comment: Decodable, Identifiable {
+struct Comment: Decodable, Identifiable, Hashable {
     let id: Int
     let postId: Int
     let email: String

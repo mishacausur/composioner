@@ -60,9 +60,12 @@ struct ModoView: View {
     @ObservedObject var viewModel = ModoViewModel()
     var body: some View {
         VStack {
+            Text("Combiner")
             List(viewModel.comments) { comment in
                 Text(comment.email)
             }
+            .background(.white)
+            Text("Asyncer")
             List(viewModel.acomments) { comment in
                 Text(comment.email)
             }
