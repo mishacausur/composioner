@@ -24,11 +24,14 @@ struct NetworkService {
                 }, completionHandler: { result in
                     switch result {
                     case .success(let data):
+                        continuation.yield(.completed(data))
+                        continuation.finish()
                     case .failure(let error):
+                        continuation.finish(throwing: error)
                     }
                 })
             } catch {
-                
+                continuation.finish(throwing: error)
             }
         }
     }
