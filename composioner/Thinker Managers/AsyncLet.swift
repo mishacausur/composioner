@@ -28,17 +28,25 @@ struct AsyncLet: View {
             .onAppear {
                Task {
                    do {
-                       let image = try await fetchImage()
-                       self.images.append(image)
                        
-                       let image1 = try await fetchImage()
-                       self.images.append(image1)
+                       async let fectImage1 = fetchImage()
+                       async let fectImage2 = fetchImage()
+                       async let fectImage3 = fetchImage()
+                       async let fectImage4 = fetchImage()
                        
-                       let image2 = try await fetchImage()
-                       self.images.append(image2)
-                       
-                       let image3 = try await fetchImage()
-                       self.images.append(image3)
+                       let (image1, image2, image3, image4) = await (try fectImage1, try fectImage2, try fectImage3, try fectImage4)
+                       self.images.append(contentsOf: [image1, image2, image3, image4])
+//                       let image = try await fetchImage()
+//                       self.images.append(image)
+//
+//                       let image1 = try await fetchImage()
+//                       self.images.append(image1)
+//
+//                       let image2 = try await fetchImage()
+//                       self.images.append(image2)
+//
+//                       let image3 = try await fetchImage()
+//                       self.images.append(image3)
                        
                    } catch {
                        
