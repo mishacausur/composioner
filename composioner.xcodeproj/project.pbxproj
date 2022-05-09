@@ -29,6 +29,7 @@
 		B6C9CADD2827D311009947D0 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CADC2827D311009947D0 /* Ring.swift */; };
 		B6C9CADF2827D321009947D0 /* RingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CADE2827D321009947D0 /* RingShape.swift */; };
 		B6C9CAE128296776009947D0 /* Streams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE028296776009947D0 /* Streams.swift */; };
+		B6C9CAE328297434009947D0 /* AsyncLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE228297434009947D0 /* AsyncLet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B6C9CADC2827D311009947D0 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		B6C9CADE2827D321009947D0 /* RingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingShape.swift; sourceTree = "<group>"; };
 		B6C9CAE028296776009947D0 /* Streams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streams.swift; sourceTree = "<group>"; };
+		B6C9CAE228297434009947D0 /* AsyncLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */,
+				B6C9CAE228297434009947D0 /* AsyncLet.swift */,
 				B6C9CAB52820612F009947D0 /* Asyncer.swift */,
 				B6C9CAC72822FDA9009947D0 /* Taskers.swift */,
 			);
@@ -268,6 +271,7 @@
 				B6C9CAE128296776009947D0 /* Streams.swift in Sources */,
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 				B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */,
+				B6C9CAE328297434009947D0 /* AsyncLet.swift in Sources */,
 				B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */,
 				B6C9CADB2827D2CA009947D0 /* Ringer.swift in Sources */,
 				B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */,
