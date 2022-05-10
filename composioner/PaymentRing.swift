@@ -31,7 +31,12 @@ struct PaymentRing: View {
                     .rotationEffect(.init(degrees: value))
                     .gesture(DragGesture().onChanged(onDrag(value:)))
                     .rotationEffect(.init(degrees: -90))
-              
+                
+                HStack {
+                    Text("$")
+                    Text(String(format: "%.0f", current * 1000))
+                }
+                .font(.largeTitle)
             }
         }
     }
