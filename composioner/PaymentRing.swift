@@ -18,7 +18,13 @@ struct PaymentRing: View {
                     .stroke(.secondary, style: StrokeStyle(lineWidth: 40, lineCap: .butt, lineJoin: .round))
                     .frame(width: frameSize, height: frameSize)
                 
-              
+                Circle()
+                    .trim(from: 0, to: current)
+                    .stroke(.green, style: StrokeStyle(lineWidth: 40, lineCap: .round, lineJoin: .round))
+                    .frame(width: frameSize, height: frameSize)
+                    .rotationEffect(.init(degrees: -90))
+                
+             
             }
         }
     }
