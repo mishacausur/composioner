@@ -1,0 +1,48 @@
+//
+//  PaymentRing.swift
+//  composioner
+//
+//  Created by Misha Causur on 10.05.2022.
+//
+
+import SwiftUI
+
+struct PaymentRing: View {
+    @State private var frameSize = UIScreen.main.bounds.width - 120
+    @State private var current: CGFloat = 0
+    @State private var value: Double = 0
+    var body: some View {
+        VStack {
+            ZStack {
+                Circle()
+                    .stroke(.secondary, style: StrokeStyle(lineWidth: 40, lineCap: .butt, lineJoin: .round))
+                    .frame(width: frameSize, height: frameSize)
+                
+              
+            }
+        }
+    }
+    
+    func onDrag(value: DragGesture.Value) {
+        let radianVector = CGVector(dx: value.location.x, dy: value.location.y)
+        let radian = atan2(radianVector.dy - 20, radianVector.dx - 20)
+        var angleValue = radian * 180 / .pi
+        
+        if angleValue < 0 {
+            angleValue = 360 + angleValue
+        }
+        
+        withAnimation(Animation.linear(duration: 0.25)) {
+            let current = angleValue / 360
+            self.current = current
+            self.value = Double(angleValue)
+        }
+    }
+}
+
+struct PaymentRing_Previews: PreviewProvider {
+    static var previews: some View {
+        PaymentRing()
+            .preferredColorScheme(.dark)
+    }
+}

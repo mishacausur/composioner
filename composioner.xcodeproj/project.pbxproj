@@ -30,6 +30,7 @@
 		B6C9CADF2827D321009947D0 /* RingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CADE2827D321009947D0 /* RingShape.swift */; };
 		B6C9CAE128296776009947D0 /* Streams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE028296776009947D0 /* Streams.swift */; };
 		B6C9CAE328297434009947D0 /* AsyncLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE228297434009947D0 /* AsyncLet.swift */; };
+		B6C9CAE5282ACA5A009947D0 /* PaymentRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE4282ACA5A009947D0 /* PaymentRing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		B6C9CADE2827D321009947D0 /* RingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingShape.swift; sourceTree = "<group>"; };
 		B6C9CAE028296776009947D0 /* Streams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streams.swift; sourceTree = "<group>"; };
 		B6C9CAE228297434009947D0 /* AsyncLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLet.swift; sourceTree = "<group>"; };
+		B6C9CAE4282ACA5A009947D0 /* PaymentRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +99,11 @@
 				B65A564A28148CE3008B7922 /* ViewModel */,
 				B65A564928148CD6008B7922 /* View */,
 				B65A563B28148C54008B7922 /* composionerApp.swift */,
+				B6C9CAE028296776009947D0 /* Streams.swift */,
 				B65A563D28148C54008B7922 /* ContentView.swift */,
 				B65A563F28148C56008B7922 /* Assets.xcassets */,
 				B65A564128148C56008B7922 /* Preview Content */,
-				B6C9CAE028296776009947D0 /* Streams.swift */,
+				B6C9CAE4282ACA5A009947D0 /* PaymentRing.swift */,
 			);
 			path = composioner;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 				B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */,
 				B6C9CAE328297434009947D0 /* AsyncLet.swift in Sources */,
+				B6C9CAE5282ACA5A009947D0 /* PaymentRing.swift in Sources */,
 				B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */,
 				B6C9CADB2827D2CA009947D0 /* Ringer.swift in Sources */,
 				B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */,
