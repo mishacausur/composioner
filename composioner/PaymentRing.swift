@@ -24,7 +24,14 @@ struct PaymentRing: View {
                     .frame(width: frameSize, height: frameSize)
                     .rotationEffect(.init(degrees: -90))
                 
-             
+                Circle()
+                    .fill(.white)
+                    .frame(width: 40, height: 40)
+                    .offset(x: frameSize / 2)
+                    .rotationEffect(.init(degrees: value))
+                    .gesture(DragGesture().onChanged(onDrag(value:)))
+                    .rotationEffect(.init(degrees: -90))
+              
             }
         }
     }
