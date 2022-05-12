@@ -14,6 +14,7 @@
 		B65A564D28148D54008B7922 /* CompositionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A564C28148D54008B7922 /* CompositionalView.swift */; };
 		B65A564F2814991D008B7922 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A564E2814991D008B7922 /* ImageModel.swift */; };
 		B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A565028149A4F008B7922 /* ImageFetcher.swift */; };
+		B6607109282D8E1F00749C19 /* TaskGrouper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6607108282D8E1F00749C19 /* TaskGrouper.swift */; };
 		B6A8330028149DA100DAFCE1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6A832FF28149DA100DAFCE1 /* SDWebImageSwiftUI */; };
 		B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */; };
 		B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB52820612F009947D0 /* Asyncer.swift */; };
@@ -42,6 +43,7 @@
 		B65A564C28148D54008B7922 /* CompositionalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalView.swift; sourceTree = "<group>"; };
 		B65A564E2814991D008B7922 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		B65A565028149A4F008B7922 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		B6607108282D8E1F00749C19 /* TaskGrouper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouper.swift; sourceTree = "<group>"; };
 		B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		B6C9CAB52820612F009947D0 /* Asyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncer.swift; sourceTree = "<group>"; };
 		B6C9CAC72822FDA9009947D0 /* Taskers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskers.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B6607107282D8DB000749C19 /* TaskGrouper */,
 				B6C9CAD92827D29C009947D0 /* Ringer */,
 				B6C9CAD22827B8AE009947D0 /* Asyncer */,
 				B6C9CAC92825298C009947D0 /* Experto */,
@@ -138,6 +141,14 @@
 				B65A564E2814991D008B7922 /* ImageModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B6607107282D8DB000749C19 /* TaskGrouper */ = {
+			isa = PBXGroup;
+			children = (
+				B6607108282D8E1F00749C19 /* TaskGrouper.swift */,
+			);
+			path = TaskGrouper;
 			sourceTree = "<group>";
 		};
 		B6C9CAB2281E9ADF009947D0 /* Thinker Managers */ = {
@@ -279,6 +290,7 @@
 				B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */,
 				B6C9CADB2827D2CA009947D0 /* Ringer.swift in Sources */,
 				B6C9CAD62827B9AE009947D0 /* ModoView.swift in Sources */,
+				B6607109282D8E1F00749C19 /* TaskGrouper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
