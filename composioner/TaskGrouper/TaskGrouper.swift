@@ -19,23 +19,28 @@ final class TaskGrouperDataManager {
     }
     
     func fetchImagesWithTaskGroup() async throws -> [UIImage] {
-        return try await withThrowingTaskGroup(of: UIImage.self) { group in
+        let urls = [
+            "https://picsum.photos/300",
+            "https://picsum.photos/300",
+            "https://picsum.photos/300",
+            "https://picsum.photos/300",
+            "https://picsum.photos/300",
+            "https://picsum.photos/300"
+        ]
+        return try await withThrowingTaskGroup(of: UIImage?.self) { group in
             var images: [UIImage] = []
-            group.addTask {
-                try await self.fetchImage("https://picsum.photos/300")
-            }
-            group.addTask {
-                try await self.fetchImage("https://picsum.photos/300")
-            }
-            group.addTask {
-                try await self.fetchImage("https://picsum.photos/300")
-            }
-            group.addTask {
-                try await self.fetchImage("https://picsum.photos/300")
+            images.reserveCapacity(urls.count)
+            
+            for url in urls {
+                group.addTask {
+                    try? await self.fetchImage(url)
+                }
             }
             
             for try await result in group {
-                images.append(result)
+                if let image = result {
+                    images.append(image)
+                }
             }
             return images
         }
@@ -62,9 +67,10 @@ final class TaskGrouperViewModel: ObservableObject {
     
     func getImages() async {
         if let images1 = try? await manager.fetchImagesWithTaskGroup() {
-            print(images1.count)
+            images.append(contentsOf: images1)
+            print(images.count)
         } else {
-            print("sorry but no images")
+            print("sorry but there is no images")
         }
     }
 }
