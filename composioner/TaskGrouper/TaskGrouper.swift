@@ -8,9 +8,13 @@
 import SwiftUI
 
 final class TaskGrouperDataManager {
-    func fetchImagesAsycnLet() {
-        
+    func fetchImagesAsycnLet() async -> [UIImage] {
+        async let fetchImage1 = fetchImage("https://picsum.photos/300")
+        async let fetchImage2 = fetchImage("https://picsum.photos/300")
+        async let fetchImage3 = fetchImage("https://picsum.photos/300")
+        async let fetchImage4 = fetchImage("https://picsum.photos/300")
     }
+    
     private func fetchImage(_ url: String) async throws -> UIImage {
         guard let url = URL(string: url) else { throw URLError(.badURL) }
         do {
