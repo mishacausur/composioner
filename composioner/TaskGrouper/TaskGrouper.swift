@@ -7,6 +7,25 @@
 
 import SwiftUI
 
+final class TaskGrouperDataManager {
+    func fetchImagesAsycnLet() {
+        
+    }
+    private func fetchImage(_ url: String) async throws -> UIImage {
+        guard let url = URL(string: url) else { throw URLError(.badURL) }
+        do {
+            let response = try await URLSession.shared.data(from: url)
+            if let image = UIImage(data: response.0) {
+                return image
+            } else {
+                throw URLError(.badURL)
+            }
+        } catch {
+            throw error
+        }
+    }
+}
+
 final class TaskGrouperViewModel: ObservableObject {
     @Published var images: [UIImage] = []
 }
