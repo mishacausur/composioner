@@ -33,6 +33,10 @@ final class TaskGrouperDataManager {
             group.addTask {
                 try await self.fetchImage("https://picsum.photos/300")
             }
+            
+            for try await result in group {
+                images.append(result)
+            }
             return images
         }
     }
@@ -57,11 +61,10 @@ final class TaskGrouperViewModel: ObservableObject {
     let manager = TaskGrouperDataManager()
     
     func getImages() async {
-        if let images1 = try? await manager.fetchImagesAsycnLet() {
+        if let images1 = try? await manager.fetchImagesWithTaskGroup() {
             print(images1.count)
-            images.append(contentsOf: images1)
         } else {
-            print("no images ((")
+            print("sorry but no images")
         }
     }
 }
