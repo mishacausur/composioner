@@ -8,11 +8,33 @@
 import SwiftUI
 
 final class TaskGrouperDataManager {
-    func fetchImagesAsycnLet() async -> [UIImage] {
+    func fetchImagesAsycnLet() async throws -> [UIImage] {
         async let fetchImage1 = fetchImage("https://picsum.photos/300")
         async let fetchImage2 = fetchImage("https://picsum.photos/300")
         async let fetchImage3 = fetchImage("https://picsum.photos/300")
         async let fetchImage4 = fetchImage("https://picsum.photos/300")
+        
+        let (image1, image2, image3, image4) = await (try fetchImage1, try fetchImage2, try fetchImage3, try fetchImage4)
+        return [image1, image2, image3, image4]
+    }
+    
+    func fetchImagesWithTaskGroup() async throws -> [UIImage] {
+        return try await withThrowingTaskGroup(of: UIImage.self) { group in
+            var images: [UIImage] = []
+            group.addTask {
+                try await self.fetchImage("https://picsum.photos/300")
+            }
+            group.addTask {
+                try await self.fetchImage("https://picsum.photos/300")
+            }
+            group.addTask {
+                try await self.fetchImage("https://picsum.photos/300")
+            }
+            group.addTask {
+                try await self.fetchImage("https://picsum.photos/300")
+            }
+            return images
+        }
     }
     
     private func fetchImage(_ url: String) async throws -> UIImage {
@@ -32,6 +54,16 @@ final class TaskGrouperDataManager {
 
 final class TaskGrouperViewModel: ObservableObject {
     @Published var images: [UIImage] = []
+    let manager = TaskGrouperDataManager()
+    
+    func getImages() async {
+        if let images1 = try? await manager.fetchImagesAsycnLet() {
+            print(images1.count)
+            images.append(contentsOf: images1)
+        } else {
+            print("no images ((")
+        }
+    }
 }
  
 struct TaskGrouper: View {
@@ -50,6 +82,9 @@ struct TaskGrouper: View {
                 }
             }
             .navigationTitle("Task Grouper")
+            .task {
+                await viewModel.getImages()
+            }
         }
     }
 }
