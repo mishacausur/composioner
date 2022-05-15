@@ -60,20 +60,6 @@ final class TaskGrouperDataManager {
         }
     }
 }
-
-final class TaskGrouperViewModel: ObservableObject {
-    @Published var images: [UIImage] = []
-    let manager = TaskGrouperDataManager()
-    
-    func getImages() async {
-        if let images1 = try? await manager.fetchImagesWithTaskGroup() {
-            images.append(contentsOf: images1)
-            print(images.count)
-        } else {
-            print("sorry but there is no images")
-        }
-    }
-}
  
 struct TaskGrouper: View {
     @State private var viewModel = TaskGrouperViewModel()

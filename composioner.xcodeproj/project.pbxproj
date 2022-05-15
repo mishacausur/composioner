@@ -15,6 +15,7 @@
 		B65A564F2814991D008B7922 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A564E2814991D008B7922 /* ImageModel.swift */; };
 		B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A565028149A4F008B7922 /* ImageFetcher.swift */; };
 		B6607109282D8E1F00749C19 /* TaskGrouper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6607108282D8E1F00749C19 /* TaskGrouper.swift */; };
+		B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673CF9E28317D0B005655FC /* TaskGrouperViewModel.swift */; };
 		B6A8330028149DA100DAFCE1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6A832FF28149DA100DAFCE1 /* SDWebImageSwiftUI */; };
 		B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */; };
 		B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB52820612F009947D0 /* Asyncer.swift */; };
@@ -44,6 +45,7 @@
 		B65A564E2814991D008B7922 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		B65A565028149A4F008B7922 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		B6607108282D8E1F00749C19 /* TaskGrouper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouper.swift; sourceTree = "<group>"; };
+		B673CF9E28317D0B005655FC /* TaskGrouperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouperViewModel.swift; sourceTree = "<group>"; };
 		B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		B6C9CAB52820612F009947D0 /* Asyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncer.swift; sourceTree = "<group>"; };
 		B6C9CAC72822FDA9009947D0 /* Taskers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskers.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B6607108282D8E1F00749C19 /* TaskGrouper.swift */,
+				B673CF9E28317D0B005655FC /* TaskGrouperViewModel.swift */,
 			);
 			path = TaskGrouper;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
 				B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
+				B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */,
 				B6C9CADD2827D311009947D0 /* Ring.swift in Sources */,
 				B6C9CACD28268C87009947D0 /* MainView.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
