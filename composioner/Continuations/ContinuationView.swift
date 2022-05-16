@@ -9,6 +9,9 @@ import SwiftUI
 
 final class ContinuationViewModel: ObservableObject {
     @Published var image: UIImage? = nil
+    func getImages() async {
+        
+    }
 }
 
 struct ContinuationView: View {
@@ -21,6 +24,9 @@ struct ContinuationView: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
             }
+        }
+        .task {
+            await viewModel.getImages()
         }
     }
 }
