@@ -11,7 +11,7 @@ import SwiftUI
 struct composionerApp: App {
     var body: some Scene {
         WindowGroup {
-            TaskGrouper()
+            ContentView()
         }
     }
 }

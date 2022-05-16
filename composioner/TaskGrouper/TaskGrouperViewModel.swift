@@ -5,7 +5,7 @@
 //  Created by Misha Causur on 15.05.2022.
 //
 
-import Foundation
+import UIKit
 
 final class TaskGrouperViewModel: ObservableObject {
     @Published var images: [UIImage] = []
