@@ -31,6 +31,20 @@ final class CVMNetworkManager {
             .resume()
         }
     }
+    
+    func getHeart(completion: @escaping (_ image: UIImage) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            completion(UIImage(systemName: "heart.fill")!)
+        }
+    }
+    
+    func asycHeart() async -> UIImage {
+        await withCheckedContinuation { continuation in
+            getHeart { image in
+                continuation.resume(returning: image)
+            }
+        }
+    }
 }
 
 final class ContinuationViewModel: ObservableObject {
@@ -48,6 +62,15 @@ final class ContinuationViewModel: ObservableObject {
         } catch {
             print(error)
         }
+    }
+    
+    func getHeart() {
+        networker.getHeart { [weak self] image in
+            self?.image = image
+        }
+    }
+    func heartAsync() async {
+        self.image = await networker.asycHeart()
     }
 }
 
