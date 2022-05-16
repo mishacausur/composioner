@@ -31,7 +31,7 @@ final class ContinuationViewModel: ObservableObject {
                 })
             }
         } catch {
-            error
+            print(error)
         }
     }
 }
