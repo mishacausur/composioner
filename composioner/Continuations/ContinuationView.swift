@@ -16,6 +16,21 @@ final class CVMNetworkManager {
             throw error
         }
     }
+    
+    func getDataCont(with url: URL) async throws -> Data {
+        return try await withCheckedThrowingContinuation { continuation in
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data {
+                    continuation.resume(returning: data)
+                } else if let error = error {
+                    continuation.resume(throwing: error)
+                } else {
+                    continuation.resume(throwing: URLError(.badURL))
+                }
+            }
+            .resume()
+        }
+    }
 }
 
 final class ContinuationViewModel: ObservableObject {
@@ -24,7 +39,7 @@ final class ContinuationViewModel: ObservableObject {
     func getImages() async {
         guard let url = URL(string: "https://picsum.photos/200") else { return }
         do {
-            let data = try await networker.getData(with: url)
+            let data = try await networker.getDataCont(with: url)
             if let image = UIImage(data: data) {
                 await MainActor.run(body: {
                     self.image = image
