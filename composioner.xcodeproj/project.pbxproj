@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65062562832D43E00673D02 /* ContinuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062552832D43E00673D02 /* ContinuationView.swift */; };
 		B65A563C28148C54008B7922 /* composionerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A563B28148C54008B7922 /* composionerApp.swift */; };
 		B65A563E28148C54008B7922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A563D28148C54008B7922 /* ContentView.swift */; };
 		B65A564028148C56008B7922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65A563F28148C56008B7922 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B65062552832D43E00673D02 /* ContinuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationView.swift; sourceTree = "<group>"; };
 		B65A563828148C54008B7922 /* composioner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = composioner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65A563B28148C54008B7922 /* composionerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = composionerApp.swift; sourceTree = "<group>"; };
 		B65A563D28148C54008B7922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B65062542832D3FC00673D02 /* Continuations */ = {
+			isa = PBXGroup;
+			children = (
+				B65062552832D43E00673D02 /* ContinuationView.swift */,
+			);
+			path = Continuations;
+			sourceTree = "<group>";
+		};
 		B65A562F28148C54008B7922 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B65062542832D3FC00673D02 /* Continuations */,
 				B6607107282D8DB000749C19 /* TaskGrouper */,
 				B6C9CAD92827D29C009947D0 /* Ringer */,
 				B6C9CAD22827B8AE009947D0 /* Asyncer */,
@@ -275,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65062562832D43E00673D02 /* ContinuationView.swift in Sources */,
 				B65A564D28148D54008B7922 /* CompositionalView.swift in Sources */,
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
 				B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */,
