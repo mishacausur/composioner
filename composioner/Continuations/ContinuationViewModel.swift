@@ -5,7 +5,7 @@
 //  Created by Misha Causur on 18.05.2022.
 //
 
-import Foundation
+import UIKit
 
 final class ContinuationViewModel: ObservableObject {
     @Published var image: UIImage? = nil
