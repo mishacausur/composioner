@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B65062562832D43E00673D02 /* ContinuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062552832D43E00673D02 /* ContinuationView.swift */; };
+		B650625A2835760E00673D02 /* CVMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062592835760E00673D02 /* CVMNetworkManager.swift */; };
 		B65A563C28148C54008B7922 /* composionerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A563B28148C54008B7922 /* composionerApp.swift */; };
 		B65A563E28148C54008B7922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A563D28148C54008B7922 /* ContentView.swift */; };
 		B65A564028148C56008B7922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65A563F28148C56008B7922 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		B65062552832D43E00673D02 /* ContinuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationView.swift; sourceTree = "<group>"; };
+		B65062592835760E00673D02 /* CVMNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMNetworkManager.swift; sourceTree = "<group>"; };
 		B65A563828148C54008B7922 /* composioner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = composioner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65A563B28148C54008B7922 /* composionerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = composionerApp.swift; sourceTree = "<group>"; };
 		B65A563D28148C54008B7922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B65062552832D43E00673D02 /* ContinuationView.swift */,
+				B65062592835760E00673D02 /* CVMNetworkManager.swift */,
 			);
 			path = Continuations;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
 				B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */,
 				B6C9CADD2827D311009947D0 /* Ring.swift in Sources */,
+				B650625A2835760E00673D02 /* CVMNetworkManager.swift in Sources */,
 				B6C9CACD28268C87009947D0 /* MainView.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
 				B6C9CADF2827D321009947D0 /* RingShape.swift in Sources */,
