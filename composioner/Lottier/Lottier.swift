@@ -8,20 +8,34 @@
 import SwiftUI
 import Lottie
 
-struct Lottier: View {
-    @State var isPlaying: Bool = false
+struct Lottier<Content: View>: View {
+    var content: Content
+    var showIndicators: Bool
+    var lottieName: String
+    var onRefresh: () async -> Void
+    init(showIndicators: Bool, lottieName: String, @ViewBuilder content: @escaping () -> Content, onRefresh: @escaping () async -> Void) {
+        self.showIndicators = showIndicators
+        self.lottieName = lottieName
+        self.content = content()
+        self.onRefresh = onRefresh
+    }
     var body: some View {
-        LottierView(filename: "104753-friendly-owl", isPlaying: $isPlaying)
-            .frame(width: 200)
-            .onTapGesture {
-                isPlaying.toggle()
-            }
+        ScrollView(.vertical, showsIndicators: showIndicators) {
+            content
+        }
     }
 }
 
 struct Lottier_Previews: PreviewProvider {
     static var previews: some View {
-        Lottier()
+        Lottier(showIndicators: false, lottieName: "104753-friendly-owl") {
+            Rectangle()
+                .fill(.red)
+                .frame(height: 200)
+        } onRefresh: {
+            
+        }
+
     }
 }
 
