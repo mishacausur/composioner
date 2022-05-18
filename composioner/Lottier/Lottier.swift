@@ -24,8 +24,14 @@ struct Lottier<Content: View>: View {
     }
     var body: some View {
         ScrollView(.vertical, showsIndicators: showIndicators) {
-            content
+            VStack(spacing: 0) {
+                content
+            }
+            .offset(coordinateSpace: "SCROLL") { offset in
+                
+            }
         }
+        .coordinateSpace(name: "SCROLL")
     }
 }
 
@@ -44,8 +50,27 @@ struct Lottier_Previews: PreviewProvider {
 
 extension View {
     @ViewBuilder
-    func offset() {
-        
+    func offset(coordinateSpace: String, offset: @escaping (CGFloat) -> Void) -> some View {
+        self
+            .overlay {
+                GeometryReader { proxy in
+                    let minY = proxy.frame(in: .named(coordinateSpace)).minY
+                    
+                    Color.clear
+                        .preference(key: OfsetKey.self, value: minY)
+                        .onPreferenceChange(OfsetKey.self) { value in
+                            offset(value)
+                        }
+                }
+            }
+    }
+}
+
+struct OfsetKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
     }
 }
 
