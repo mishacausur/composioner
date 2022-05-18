@@ -13,7 +13,10 @@ struct Lottier<Content: View>: View {
     var showIndicators: Bool
     var lottieName: String
     var onRefresh: () async -> Void
-    init(showIndicators: Bool, lottieName: String, @ViewBuilder content: @escaping () -> Content, onRefresh: @escaping () async -> Void) {
+    init(showIndicators: Bool,
+         lottieName: String,
+         @ViewBuilder content: @escaping () -> Content,
+         onRefresh: @escaping () async -> Void) {
         self.showIndicators = showIndicators
         self.lottieName = lottieName
         self.content = content()
@@ -36,6 +39,13 @@ struct Lottier_Previews: PreviewProvider {
             
         }
 
+    }
+}
+
+extension View {
+    @ViewBuilder
+    func offset() {
+        
     }
 }
 
