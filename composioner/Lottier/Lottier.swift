@@ -11,8 +11,11 @@ import Lottie
 struct Lottier: View {
     @State var isPlaying: Bool = false
     var body: some View {
-        LottierView(filename: "104753-friendly-owl", isPlaying: .constant(true))
+        LottierView(filename: "104753-friendly-owl", isPlaying: $isPlaying)
             .frame(width: 200)
+            .onTapGesture {
+                isPlaying.toggle()
+            }
     }
 }
 
