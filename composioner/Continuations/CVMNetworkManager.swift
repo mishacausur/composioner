@@ -5,6 +5,8 @@
 //  Created by Misha Causur on 18.05.2022.
 //
 
+import UIKit
+
 final class CVMNetworkManager {
     func getData(with url: URL) async throws -> Data {
         do {
