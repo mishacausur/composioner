@@ -24,6 +24,7 @@
 		B6607109282D8E1F00749C19 /* TaskGrouper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6607108282D8E1F00749C19 /* TaskGrouper.swift */; };
 		B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673CF9E28317D0B005655FC /* TaskGrouperViewModel.swift */; };
 		B673CFA128317D45005655FC /* TaskGrouperDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673CFA028317D45005655FC /* TaskGrouperDataManager.swift */; };
+		B69AC59928396A7A00A2774E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69AC59828396A7A00A2774E /* Extensions.swift */; };
 		B6A8330028149DA100DAFCE1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6A832FF28149DA100DAFCE1 /* SDWebImageSwiftUI */; };
 		B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */; };
 		B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB52820612F009947D0 /* Asyncer.swift */; };
@@ -61,6 +62,7 @@
 		B6607108282D8E1F00749C19 /* TaskGrouper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouper.swift; sourceTree = "<group>"; };
 		B673CF9E28317D0B005655FC /* TaskGrouperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouperViewModel.swift; sourceTree = "<group>"; };
 		B673CFA028317D45005655FC /* TaskGrouperDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouperDataManager.swift; sourceTree = "<group>"; };
+		B69AC59828396A7A00A2774E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		B6C9CAB52820612F009947D0 /* Asyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncer.swift; sourceTree = "<group>"; };
 		B6C9CAC72822FDA9009947D0 /* Taskers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskers.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				B65A563F28148C56008B7922 /* Assets.xcassets */,
 				B65A564128148C56008B7922 /* Preview Content */,
 				B6C9CAE4282ACA5A009947D0 /* PaymentRing.swift */,
+				B69AC59828396A7A00A2774E /* Extensions.swift */,
 			);
 			path = composioner;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
 				B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */,
+				B69AC59928396A7A00A2774E /* Extensions.swift in Sources */,
 				B65062642835841300673D02 /* Lottier.swift in Sources */,
 				B6C9CADD2827D311009947D0 /* Ring.swift in Sources */,
 				B650625A2835760E00673D02 /* CVMNetworkManager.swift in Sources */,

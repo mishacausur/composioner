@@ -48,24 +48,6 @@ struct Lottier_Previews: PreviewProvider {
     }
 }
 
-extension View {
-    @ViewBuilder
-    func offset(coordinateSpace: String, offset: @escaping (CGFloat) -> Void) -> some View {
-        self
-            .overlay {
-                GeometryReader { proxy in
-                    let minY = proxy.frame(in: .named(coordinateSpace)).minY
-                    
-                    Color.clear
-                        .preference(key: OfsetKey.self, value: minY)
-                        .onPreferenceChange(OfsetKey.self) { value in
-                            offset(value)
-                        }
-                }
-            }
-    }
-}
-
 struct OfsetKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     
