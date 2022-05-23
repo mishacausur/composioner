@@ -21,6 +21,24 @@ class DataClass {
     }
 }
 
+actor DataActor {
+    static let instance = DataActor()
+    nonisolated let text = "text"
+    private init() { }
+    
+    var data: [String] = []
+    func randomData() -> String? {
+            data.append(UUID().uuidString)
+            return data.randomElement()
+        
+    }
+    
+    nonisolated
+    func getString() -> String {
+        "new string"
+    }
+}
+
 struct HomeView: View {
     let manager = DataClass.instance
     @State private var text: String = ""
@@ -48,6 +66,7 @@ struct HomeView: View {
 
 struct FavouriteView: View {
     let manager = DataClass.instance
+    let actor = DataActor.instance
     @State private var text: String = ""
     let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     var body: some View {
@@ -57,13 +76,20 @@ struct FavouriteView: View {
                 .font(.headline)
         }
         .onReceive(timer) { _ in
-            DispatchQueue.global(qos: .background).async {
-                manager.randomData { title in
-                    if let data = title {
-                        DispatchQueue.main.async {
-                            self.text = data
-                        }
-                    }
+//            DispatchQueue.global(qos: .background).async {
+//                manager.randomData { title in
+//                    if let data = title {
+//                        DispatchQueue.main.async {
+//                            self.text = data
+//                        }
+//                    }
+//                }
+//            }
+            Task {
+                if let title = await actor.randomData() {
+                    await MainActor.run(body: {
+                        self.text = title
+                    })
                 }
             }
         }
