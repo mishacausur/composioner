@@ -7,9 +7,21 @@
 
 import SwiftUI
 
+
+
 struct Actors: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            Text("Hi")
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+            
+            Text("Hi again")
+                .tabItem {
+                    Label("Favourites", systemImage: "heart.fill")
+                }
+        }
     }
 }
 
