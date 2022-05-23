@@ -12,10 +12,12 @@ class DataClass {
     private init() { }
     
     var data: [String] = []
-    
-    func randomData() -> String? {
-        self.data.append(UUID().uuidString)
-        return data.randomElement()
+    let lock = DispatchQueue(label: "com.MyApp.DataClass")
+    func randomData(completionHandler: @escaping (_ title: String?) -> Void) {
+        lock.async { [weak self] in
+            self?.data.append(UUID().uuidString)
+            completionHandler(self?.data.randomElement())
+        }
     }
 }
 
@@ -32,9 +34,11 @@ struct HomeView: View {
         }
         .onReceive(timer) { _ in
             DispatchQueue.global(qos: .background).async {
-                if let data = manager.randomData() {
-                    DispatchQueue.main.async {
-                        self.text = data
+                manager.randomData { title in
+                    if let data = title {
+                        DispatchQueue.main.async {
+                            self.text = data
+                        }
                     }
                 }
             }
@@ -54,9 +58,11 @@ struct FavouriteView: View {
         }
         .onReceive(timer) { _ in
             DispatchQueue.global(qos: .background).async {
-                if let data = manager.randomData() {
-                    DispatchQueue.main.async {
-                        self.text = data
+                manager.randomData { title in
+                    if let data = title {
+                        DispatchQueue.main.async {
+                            self.text = data
+                        }
                     }
                 }
             }
