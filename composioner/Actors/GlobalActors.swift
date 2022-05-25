@@ -20,13 +20,20 @@ actor GlobalManager {
 }
 
 final class GlobalActorViewModel: ObservableObject {
-    @Published var data: [String] = []
+    @MainActor @Published var data: [String] = []
     let manager = FirstGlobalActor.shared
     
     @FirstGlobalActor
     func getData() async {
         let data = await manager.getDataFromDB()
-        self.data = data
+        await MainActor.run(body: {
+            self.data = data
+        })
+    }
+    
+    @MainActor
+    func getMainData() {
+        
     }
 }
 
