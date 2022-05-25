@@ -7,15 +7,23 @@
 
 import SwiftUI
 
+@globalActor struct FirstGlobalActor {
+    
+   static var shared = GlobalManager()
+    
+}
+
 actor GlobalManager {
     func getDataFromDB() -> [String] {
-        return ["misha","pussifer","jenny"]
+        return ["misha","pussifer","jenny", "so on"]
     }
 }
 
 final class GlobalActorViewModel: ObservableObject {
     @Published var data: [String] = []
-    let manager = GlobalManager()
+    let manager = FirstGlobalActor.shared
+    
+    @FirstGlobalActor
     func getData() async {
         let data = await manager.getDataFromDB()
         self.data = data
