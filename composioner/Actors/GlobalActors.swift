@@ -7,8 +7,19 @@
 
 import SwiftUI
 
+actor GlobalManager {
+    func getDataFromDB() -> [String] {
+        return ["misha","pussifer","jenny"]
+    }
+}
+
 final class GlobalActorViewModel: ObservableObject {
     @Published var data: [String] = []
+    let manager = GlobalManager()
+    func getData() async {
+        let data = await manager.getDataFromDB()
+        self.data = data
+    }
 }
 
 struct GlobalActors: View {
@@ -21,6 +32,9 @@ struct GlobalActors: View {
                         .font(.headline)
                 }
             }
+        }
+        .task {
+            await viewModel.getData()
         }
     }
 }
