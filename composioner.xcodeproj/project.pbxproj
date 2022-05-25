@@ -27,6 +27,7 @@
 		B69AC59928396A7A00A2774E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69AC59828396A7A00A2774E /* Extensions.swift */; };
 		B6A8330028149DA100DAFCE1 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B6A832FF28149DA100DAFCE1 /* SDWebImageSwiftUI */; };
 		B6B9A688283C064800DA9CD8 /* Actors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9A687283C064800DA9CD8 /* Actors.swift */; };
+		B6B9A68A283EA6E200DA9CD8 /* GlobalActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9A689283EA6E200DA9CD8 /* GlobalActors.swift */; };
 		B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */; };
 		B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB52820612F009947D0 /* Asyncer.swift */; };
 		B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAC72822FDA9009947D0 /* Taskers.swift */; };
@@ -65,6 +66,7 @@
 		B673CFA028317D45005655FC /* TaskGrouperDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskGrouperDataManager.swift; sourceTree = "<group>"; };
 		B69AC59828396A7A00A2774E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6B9A687283C064800DA9CD8 /* Actors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actors.swift; sourceTree = "<group>"; };
+		B6B9A689283EA6E200DA9CD8 /* GlobalActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActors.swift; sourceTree = "<group>"; };
 		B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		B6C9CAB52820612F009947D0 /* Asyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncer.swift; sourceTree = "<group>"; };
 		B6C9CAC72822FDA9009947D0 /* Taskers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskers.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B6B9A687283C064800DA9CD8 /* Actors.swift */,
+				B6B9A689283EA6E200DA9CD8 /* GlobalActors.swift */,
 			);
 			path = Actors;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				B6C9CACD28268C87009947D0 /* MainView.swift in Sources */,
 				B65A564F2814991D008B7922 /* ImageModel.swift in Sources */,
 				B6C9CADF2827D321009947D0 /* RingShape.swift in Sources */,
+				B6B9A68A283EA6E200DA9CD8 /* GlobalActors.swift in Sources */,
 				B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */,
 				B6C9CACB282529CD009947D0 /* ExpertoView.swift in Sources */,
 				B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */,
