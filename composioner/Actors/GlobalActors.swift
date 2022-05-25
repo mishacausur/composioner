@@ -7,9 +7,21 @@
 
 import SwiftUI
 
+final class GlobalActorViewModel: ObservableObject {
+    @Published var data: [String] = []
+}
+
 struct GlobalActors: View {
+    @StateObject private var viewModel = GlobalActorViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                ForEach(viewModel.data, id: \.self) {
+                    Text($0)
+                        .font(.headline)
+                }
+            }
+        }
     }
 }
 
