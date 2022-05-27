@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-//class DataClass {
-//    static let instance = DataClass()
-//    private init() { }
-//    
-//    var data: [String] = []
-//    let lock = DispatchQueue(label: "com.MyApp.DataClass")
-//    func randomData(completionHandler: @escaping (_ title: String?) -> Void) {
-//        lock.async { [weak self] in
-//            self?.data.append(UUID().uuidString)
-//            completionHandler(self?.data.randomElement())
-//        }
-//    }
-//}
+class DataClass {
+    static let instance = DataClass()
+    private init() { }
+    
+    var data: [String] = []
+    let lock = DispatchQueue(label: "com.MyApp.DataClass")
+    func randomData(completionHandler: @escaping (_ title: String?) -> Void) {
+        lock.async { [weak self] in
+            self?.data.append(UUID().uuidString)
+            completionHandler(self?.data.randomElement())
+        }
+    }
+}
 
 actor DataActor {
     static let instance = DataActor()
