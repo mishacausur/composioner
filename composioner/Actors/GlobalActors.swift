@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-final class GlobalActorViewModel: ObservableObject {
-    @MainActor @Published var data: [String] = []
-    let manager = FirstGlobalActor.shared
-    
-    @FirstGlobalActor
-    func getData() async {
-        let data = await manager.getDataFromDB()
-        await MainActor.run(body: {
-            self.data = data
-        })
-    }
-    
-    @MainActor
-    func getMainData() {
-        
-    }
-}
-
 struct GlobalActors: View {
     @StateObject private var viewModel = GlobalActorViewModel()
     var body: some View {
