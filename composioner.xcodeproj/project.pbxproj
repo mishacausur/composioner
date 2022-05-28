@@ -30,6 +30,7 @@
 		B6B9A68A283EA6E200DA9CD8 /* GlobalActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9A689283EA6E200DA9CD8 /* GlobalActors.swift */; };
 		B6B9A68C2841505A00DA9CD8 /* GlobalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9A68B2841505A00DA9CD8 /* GlobalManager.swift */; };
 		B6B9A68E2841508500DA9CD8 /* GlobalActorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9A68D2841508500DA9CD8 /* GlobalActorVM.swift */; };
+		B6B9A6912842A10900DA9CD8 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B9A6902842A10900DA9CD8 /* ViewModifiers.swift */; };
 		B6C9CAB4281E9B05009947D0 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */; };
 		B6C9CAB62820612F009947D0 /* Asyncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAB52820612F009947D0 /* Asyncer.swift */; };
 		B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAC72822FDA9009947D0 /* Taskers.swift */; };
@@ -71,6 +72,7 @@
 		B6B9A689283EA6E200DA9CD8 /* GlobalActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActors.swift; sourceTree = "<group>"; };
 		B6B9A68B2841505A00DA9CD8 /* GlobalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalManager.swift; sourceTree = "<group>"; };
 		B6B9A68D2841508500DA9CD8 /* GlobalActorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalActorVM.swift; sourceTree = "<group>"; };
+		B6B9A6902842A10900DA9CD8 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		B6C9CAB3281E9B05009947D0 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		B6C9CAB52820612F009947D0 /* Asyncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asyncer.swift; sourceTree = "<group>"; };
 		B6C9CAC72822FDA9009947D0 /* Taskers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taskers.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B6B9A68F2842A0E000DA9CD8 /* ViewModifiers */,
 				B6B9A686283C063400DA9CD8 /* Actors */,
 				B650625D2835832E00673D02 /* Lottier */,
 				B65062542832D3FC00673D02 /* Continuations */,
@@ -212,8 +215,16 @@
 				B6B9A68B2841505A00DA9CD8 /* GlobalManager.swift */,
 				B6B9A689283EA6E200DA9CD8 /* GlobalActors.swift */,
 				B6B9A68D2841508500DA9CD8 /* GlobalActorVM.swift */,
+				B6B9A6902842A10900DA9CD8 /* ViewModifiers.swift */,
 			);
 			path = Actors;
+			sourceTree = "<group>";
+		};
+		B6B9A68F2842A0E000DA9CD8 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 		B6C9CAB2281E9ADF009947D0 /* Thinker Managers */ = {
@@ -343,6 +354,7 @@
 				B65A564D28148D54008B7922 /* CompositionalView.swift in Sources */,
 				B65A563E28148C54008B7922 /* ContentView.swift in Sources */,
 				B6C9CAD42827B8CA009947D0 /* Modo.swift in Sources */,
+				B6B9A6912842A10900DA9CD8 /* ViewModifiers.swift in Sources */,
 				B65A563C28148C54008B7922 /* composionerApp.swift in Sources */,
 				B6B9A68E2841508500DA9CD8 /* GlobalActorVM.swift in Sources */,
 				B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */,
