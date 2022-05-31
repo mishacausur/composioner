@@ -14,9 +14,15 @@ actor CurrentUserManager {
 }
 
 final class MyUserInfoClass: @unchecked Sendable {
-    var name: String
+    private var name: String
+    let queue = DispatchQueue(label: "com.App.Info")
     init(name: String) {
         self.name = name
+    }
+    func updateName(name: String) {
+        queue.async {
+            self.name = name
+        }
     }
 }
 
