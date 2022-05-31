@@ -8,16 +8,28 @@
 import SwiftUI
 
 actor CurrentUserManager {
-    func updateDatabase() {
+    func updateDatabase(userInfo: MyUserInfoClass) {
         
+    }
+}
+
+final class MyUserInfoClass: @unchecked Sendable {
+    var name: String
+    init(name: String) {
+        self.name = name
     }
 }
 
 final class SendableViewModel: ObservableObject {
     let manager = CurrentUserManager()
+    
+    func updateCurrentUserInfo() async {
+        let info = MyUserInfoClass(name: "Name")
+        await manager.updateDatabase(userInfo: info)
+    }
 }
 
-struct Sendable: View {
+struct SendableView: View {
     
     @StateObject private var viewModel = SendableViewModel()
     
@@ -28,6 +40,6 @@ struct Sendable: View {
 
 struct Sendable_Previews: PreviewProvider {
     static var previews: some View {
-        Sendable()
+        SendableView()
     }
 }
