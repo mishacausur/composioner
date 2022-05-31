@@ -7,7 +7,20 @@
 
 import SwiftUI
 
+actor CurrentUserManager {
+    func updateDatabase() {
+        
+    }
+}
+
+final class SendableViewModel: ObservableObject {
+    let manager = CurrentUserManager()
+}
+
 struct Sendable: View {
+    
+    @StateObject private var viewModel = SendableViewModel()
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
