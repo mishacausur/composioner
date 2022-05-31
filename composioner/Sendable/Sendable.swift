@@ -13,6 +13,10 @@ actor CurrentUserManager {
     }
 }
 
+struct MuUserInfoStruct: Sendable {
+    var name: String
+}
+
 final class MyUserInfoClass: @unchecked Sendable {
     private var name: String
     let queue = DispatchQueue(label: "com.App.Info")
