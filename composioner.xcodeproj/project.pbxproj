@@ -47,6 +47,7 @@
 		B6C9CAE128296776009947D0 /* Streams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE028296776009947D0 /* Streams.swift */; };
 		B6C9CAE328297434009947D0 /* AsyncLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE228297434009947D0 /* AsyncLet.swift */; };
 		B6C9CAE5282ACA5A009947D0 /* PaymentRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C9CAE4282ACA5A009947D0 /* PaymentRing.swift */; };
+		B6D83019284695FB0028A1CF /* Sendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D83018284695FB0028A1CF /* Sendable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		B6C9CAE028296776009947D0 /* Streams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Streams.swift; sourceTree = "<group>"; };
 		B6C9CAE228297434009947D0 /* AsyncLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLet.swift; sourceTree = "<group>"; };
 		B6C9CAE4282ACA5A009947D0 /* PaymentRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRing.swift; sourceTree = "<group>"; };
+		B6D83018284695FB0028A1CF /* Sendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sendable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B6D83017284695E70028A1CF /* Sendable */,
 				B6B9A68F2842A0E000DA9CD8 /* ViewModifiers */,
 				B6B9A686283C063400DA9CD8 /* Actors */,
 				B650625D2835832E00673D02 /* Lottier */,
@@ -269,6 +272,14 @@
 			path = Ringer;
 			sourceTree = "<group>";
 		};
+		B6D83017284695E70028A1CF /* Sendable */ = {
+			isa = PBXGroup;
+			children = (
+				B6D83018284695FB0028A1CF /* Sendable.swift */,
+			);
+			path = Sendable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,6 +382,7 @@
 				B6C9CAC82822FDA9009947D0 /* Taskers.swift in Sources */,
 				B6C9CACF28268C9A009947D0 /* Model.swift in Sources */,
 				B6C9CAD82827B9BE009947D0 /* Combainer.swift in Sources */,
+				B6D83019284695FB0028A1CF /* Sendable.swift in Sources */,
 				B6C9CAE128296776009947D0 /* Streams.swift in Sources */,
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 				B6B9A688283C064800DA9CD8 /* Actors.swift in Sources */,
