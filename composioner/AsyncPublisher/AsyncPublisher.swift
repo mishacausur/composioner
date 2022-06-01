@@ -11,8 +11,16 @@ actor AsyncPublisherDataManager {
     
     @Published var data: [String] = []
     
-    func addData() {
-        
+    func addData() async {
+        data.append("Misha")
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        data.append("Jenny")
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        data.append("Pussy")
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        data.append("Cosa")
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        data.append("Pepe")
     }
     
 }
@@ -20,9 +28,16 @@ actor AsyncPublisherDataManager {
 final class AsyncPublisherViewModel: ObservableObject {
     @Published var data: [String] = []
     let manager = AsyncPublisherDataManager()
+    init() {
+        addSubscibers()
+    }
+    
+    private func addSubscibers() {
+        
+    }
     
     func start() async {
-        
+        await manager.addData()
     }
 }
 
