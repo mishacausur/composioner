@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+final class AsyncPublisherViewModel: ObservableObject {
+    
+}
+
 struct AsyncPublisher: View {
+    
+    @StateObject private var viewModel = AsyncPublisherViewModel()
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
