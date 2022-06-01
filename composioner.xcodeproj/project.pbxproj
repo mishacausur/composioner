@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B62AABE52847EC4100753F7E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AABE42847EC4100753F7E /* ViewModel.swift */; };
+		B62AABE82847FAE700753F7E /* AsyncPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AABE72847FAE700753F7E /* AsyncPublisher.swift */; };
 		B65062562832D43E00673D02 /* ContinuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062552832D43E00673D02 /* ContinuationView.swift */; };
 		B650625A2835760E00673D02 /* CVMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062592835760E00673D02 /* CVMNetworkManager.swift */; };
 		B650625C2835765A00673D02 /* ContinuationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650625B2835765A00673D02 /* ContinuationViewModel.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		B62AABE42847EC4100753F7E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B62AABE72847FAE700753F7E /* AsyncPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncPublisher.swift; sourceTree = "<group>"; };
 		B65062552832D43E00673D02 /* ContinuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationView.swift; sourceTree = "<group>"; };
 		B65062592835760E00673D02 /* CVMNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMNetworkManager.swift; sourceTree = "<group>"; };
 		B650625B2835765A00673D02 /* ContinuationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationViewModel.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B62AABE62847FABE00753F7E /* AsyncPublisher */ = {
+			isa = PBXGroup;
+			children = (
+				B62AABE72847FAE700753F7E /* AsyncPublisher.swift */,
+			);
+			path = AsyncPublisher;
+			sourceTree = "<group>";
+		};
 		B65062542832D3FC00673D02 /* Continuations */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +155,7 @@
 		B65A563A28148C54008B7922 /* composioner */ = {
 			isa = PBXGroup;
 			children = (
+				B62AABE62847FABE00753F7E /* AsyncPublisher */,
 				B6D83017284695E70028A1CF /* Sendable */,
 				B6B9A68F2842A0E000DA9CD8 /* ViewModifiers */,
 				B6B9A686283C063400DA9CD8 /* Actors */,
@@ -391,6 +402,7 @@
 				B65A565128149A4F008B7922 /* ImageFetcher.swift in Sources */,
 				B6B9A688283C064800DA9CD8 /* Actors.swift in Sources */,
 				B6C9CAD128268DAA009947D0 /* CardView.swift in Sources */,
+				B62AABE82847FAE700753F7E /* AsyncPublisher.swift in Sources */,
 				B6C9CAE328297434009947D0 /* AsyncLet.swift in Sources */,
 				B6C9CAE5282ACA5A009947D0 /* PaymentRing.swift in Sources */,
 				B6B9A68C2841505A00DA9CD8 /* GlobalManager.swift in Sources */,
