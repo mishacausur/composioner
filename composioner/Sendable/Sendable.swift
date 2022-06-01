@@ -30,15 +30,6 @@ final class MyUserInfoClass: @unchecked Sendable {
     }
 }
 
-final class SendableViewModel: ObservableObject {
-    let manager = CurrentUserManager()
-    
-    func updateCurrentUserInfo() async {
-        let info = MyUserInfoClass(name: "Name")
-        await manager.updateDatabase(userInfo: info)
-    }
-}
-
 struct SendableView: View {
     
     @StateObject private var viewModel = SendableViewModel()

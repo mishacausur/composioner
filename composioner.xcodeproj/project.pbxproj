@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B62AABE52847EC4100753F7E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62AABE42847EC4100753F7E /* ViewModel.swift */; };
 		B65062562832D43E00673D02 /* ContinuationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062552832D43E00673D02 /* ContinuationView.swift */; };
 		B650625A2835760E00673D02 /* CVMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65062592835760E00673D02 /* CVMNetworkManager.swift */; };
 		B650625C2835765A00673D02 /* ContinuationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B650625B2835765A00673D02 /* ContinuationViewModel.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B62AABE42847EC4100753F7E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B65062552832D43E00673D02 /* ContinuationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationView.swift; sourceTree = "<group>"; };
 		B65062592835760E00673D02 /* CVMNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMNetworkManager.swift; sourceTree = "<group>"; };
 		B650625B2835765A00673D02 /* ContinuationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuationViewModel.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				B6D83018284695FB0028A1CF /* Sendable.swift */,
+				B62AABE42847EC4100753F7E /* ViewModel.swift */,
 			);
 			path = Sendable;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				B6B9A68E2841508500DA9CD8 /* GlobalActorVM.swift in Sources */,
 				B673CF9F28317D0B005655FC /* TaskGrouperViewModel.swift in Sources */,
 				B69AC59928396A7A00A2774E /* Extensions.swift in Sources */,
+				B62AABE52847EC4100753F7E /* ViewModel.swift in Sources */,
 				B65062642835841300673D02 /* Lottier.swift in Sources */,
 				B6C9CADD2827D311009947D0 /* Ring.swift in Sources */,
 				B650625A2835760E00673D02 /* CVMNetworkManager.swift in Sources */,
