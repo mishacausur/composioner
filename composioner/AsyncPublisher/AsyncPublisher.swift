@@ -7,8 +7,23 @@
 
 import SwiftUI
 
-final class AsyncPublisherViewModel: ObservableObject {
+actor AsyncPublisherDataManager {
     
+    @Published var data: [String] = []
+    
+    func addData() {
+        
+    }
+    
+}
+
+final class AsyncPublisherViewModel: ObservableObject {
+    @Published var data: [String] = []
+    let manager = AsyncPublisherDataManager()
+    
+    func start() async {
+        
+    }
 }
 
 struct AsyncPublisher: View {
@@ -16,7 +31,17 @@ struct AsyncPublisher: View {
     @StateObject private var viewModel = AsyncPublisherViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                ForEach(viewModel.data, id: \.self) {
+                    Text($0)
+                        .font(.headline.bold())
+                }
+            }
+        }
+        .task {
+            await viewModel.start()
+        }
     }
 }
 
