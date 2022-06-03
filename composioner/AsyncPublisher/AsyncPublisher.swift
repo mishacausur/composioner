@@ -43,13 +43,17 @@ final class AsyncPublisherViewModel: ObservableObject {
                 })
             }
         }
-        
-//        manager.$data
-//            .receive(on: DispatchQueue.main, options: nil)
-//            .sink { array in
-//                self.data = array
-//            }
-//            .store(in: &cancellables)
+    }
+    
+    private func addSubscibersCombine() {
+        Task {
+            manager.$data
+                .receive(on: DispatchQueue.main, options: nil)
+                .sink { array in
+                    self.data = array
+                }
+                .store(in: &cancellables)
+        }
     }
     
     func start() async {
