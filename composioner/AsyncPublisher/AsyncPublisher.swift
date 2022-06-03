@@ -45,12 +45,14 @@ final class AsyncPublisherViewModel: ObservableObject {
         }
     }
     
-    private func addSubscibersCombine() {
+    private func addSubscibersCombine() async {
         Task {
             manager.$data
                 .receive(on: DispatchQueue.main, options: nil)
                 .sink { array in
-                    self.data = array
+                    await MainActor.run {
+                        self.data = array
+                    }
                 }
                 .store(in: &cancellables)
         }
